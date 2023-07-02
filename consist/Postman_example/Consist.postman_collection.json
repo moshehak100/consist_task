@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "2ecfe1bc-2873-4321-945c-5e90bf5963a2",
+		"name": "Consist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2964558"
+	},
+	"item": [
+		{
+			"name": "create jwt token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44317/Auth?password=123",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"Auth"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "convert to familiy tree",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgzODU4MjF9.19jccJP_qnv68tAsWEwogYMS9wyNBy6zSteBuULxTp0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44317/FamilyTree?familyList=[{\"id\": 1,\"name\": \"david\",\"parent\": null},{\"id\": 2,\"name\": \"tom\",\"parent\": 1},{\"id\": 3,\"name\": \"tami\",\"parent\": 2}]",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"FamilyTree"
+					],
+					"query": [
+						{
+							"key": "familyList",
+							"value": "[{\"id\": 1,\"name\": \"david\",\"parent\": null},{\"id\": 2,\"name\": \"tom\",\"parent\": 1},{\"id\": 3,\"name\": \"tami\",\"parent\": 2}]"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
